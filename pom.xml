@@ -5,7 +5,8 @@
     <parent>
         <groupId>org.jenkins-ci.plugins</groupId>
         <artifactId>plugin</artifactId>
-        <version>3.56</version>
+        <version>4.33</version>
+        <relativePath />
     </parent>
 
     <artifactId>docker-java-api</artifactId>
@@ -26,7 +27,7 @@
     <properties>
         <revision>3.1.5</revision>
         <changelist>999999-SNAPSHOT</changelist>
-        <jenkins.version>1.609.1</jenkins.version>
+        <jenkins.version>2.289</jenkins.version>
         <java.level>8</java.level>
         <hpi.compatibleSinceVersion>3.1</hpi.compatibleSinceVersion>
     </properties>
@@ -50,6 +51,18 @@
             <url>https://repo.jenkins-ci.org/public/</url>
         </pluginRepository>
     </pluginRepositories>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>io.jenkins.tools.bom</groupId>
+                <artifactId>bom-2.289.x</artifactId>
+                <version>1246.va_b_50630c1d19</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <dependencies>
         <dependency>
